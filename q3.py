@@ -20,3 +20,12 @@ if not primes:
     print("No primes")
 else:   
     print(primes)
+
+'''
+When does the else block associated with a for loop
+execute?
+
+The else block associated with a for loop is executed when the for loop is completely exected.
+the else block will not execute if the for loop is broken in between.
+
+'''
