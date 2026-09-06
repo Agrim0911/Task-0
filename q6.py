@@ -40,5 +40,16 @@ plt.tight_layout()
 plt.savefig("./plots/score_distribution.png", dpi=150)
 plt.close()
 
+#Custom plot of Improvement vs Attendence
+plt.figure(figsize=(8, 6))
+plt.scatter(df["Attendance"], df["Improvement"], color="purple", edgecolor="black", s=80)
+plt.title("Improvement vs Attendance", fontsize=14, fontweight="bold")
+plt.xlabel("Attendance (%)")
+plt.ylabel("Improvement (Final Score − Previous Score)")
+plt.axhline(0, color="gray", linewidth=1, linestyle="--")
+plt.grid(True, alpha=0.3)
+plt.tight_layout()
+plt.savefig("./plots/custom_plot.png", dpi=150)
+plt.close()
 
 print("All four plots saved successfully.")
