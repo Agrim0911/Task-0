@@ -14,7 +14,6 @@ plt.tight_layout()
 plt.savefig("./plots/final_scores.png", dpi=150)
 plt.close()
 
-
 #Scatter plot: Hours studied vs final score
 plt.figure(figsize=(8, 6))
 plt.scatter(df["Hours_Studied"], df["Final_Score"], color="orange", edgecolor="black")
