@@ -4,12 +4,21 @@ import matplotlib.pyplot as plt
 df = pd.read_csv("./data/processed_student_performance.csv")
 
 #Bar chart: Student names vs final scores
-plt.figure(figsize=(40, 24))
-plt.bar(df["Student"], df["Final_Score"], color="blue")
+plt.figure(figsize=(20, 6))
+bars = plt.bar(df["Student"], df["Final_Score"], color="blue")
 plt.title("Final Scores by Student", fontsize=14, fontweight="bold")
 plt.xlabel("Student Name")
 plt.ylabel("Final Score")
 plt.xticks(rotation=45, ha="right")
+for bar in bars:
+    height = bar.get_height()
+    plt.text(
+        bar.get_x() + bar.get_width() / 2,   # x: center of the bar
+        height - 5,                          # y: slightly below the top (inside the bar)
+        f"{height:.0f}",                     # label text
+        ha="center", va="top",
+        color="white", fontsize=9
+    )
 plt.tight_layout()
 plt.savefig("./plots/final_scores.png", dpi=150)
 plt.close()
