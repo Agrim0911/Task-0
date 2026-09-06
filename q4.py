@@ -23,10 +23,10 @@ std_score = np.std(final_scores)
 print("Standard Deviation of Final Scores:", std_score)
 
 final_scores_bonus = final_scores + 5
-print("\nFinal Scores with Bonus:", final_scores_bonus)
+print("Final Scores with Bonus:", final_scores_bonus)
 
 passed_75 = final_scores_bonus >= 75
-print("\nScored at least 75 (Boolean):", passed_75)
+print("Scored at least 75 (Boolean):", passed_75)
 
 scores_75_and_above = final_scores_bonus[passed_75]
-print("Scores >= 75:", scores_75_and_above)
+print("Scores grater than or equal to 75:", scores_75_and_above)
